@@ -1,4 +1,5 @@
 import { Punto } from "./punto";
+import { Triangulo } from "./triangulo";
 
 let punto:Punto = new Punto(3,5);
 let punto2:Punto = new Punto (1,1);
@@ -33,6 +34,16 @@ let puntoCercano = punto.calcularMasCercano(arrayPuntos);
 
 console.log("El más Cercano es: ");
 console.log(puntoCercano.toString());
+
+//Creamos un triángulo.
+
+let puntox = new Punto(0,0);
+let puntoy = new Punto(4,0);
+let puntoz = new Punto(2,2);
+
+let triangulo = new Triangulo(puntox,puntoy,puntoz);
+
+console.log(triangulo.calcularLongitudLados());
 
 
 
