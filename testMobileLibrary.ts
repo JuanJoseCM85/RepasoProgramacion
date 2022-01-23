@@ -10,7 +10,7 @@ let arrayMob:Mobile[] = [nokia3210,iphone3G,samsungGalaxy10,oppoFindX3];
 
 let coleccionMobil:MobileLibrary = new MobileLibrary("Mi colección","Almeria",arrayMob);
 
-coleccionMobil.totalPriceCalculation();
+//coleccionMobil.totalPriceCalculation();
 
 console.log("El Precio total es: ");
 console.log(coleccionMobil.getTotalPrice());
@@ -20,3 +20,13 @@ console.log(coleccionMobil.getName());
 console.log(coleccionMobil.getLocation());
 console.log(coleccionMobil.getMobiles());
 
+//Probamos los set
+coleccionMobil.setName("Nueva Colección");
+coleccionMobil.setLocation("Granada");
+//coleccionMobil.setTotalPrice(140);
+
+console.log(coleccionMobil.getName());
+console.log(coleccionMobil.getLocation());
+console.log(coleccionMobil.getMobiles());
+
+coleccionMobil.printLibrary();

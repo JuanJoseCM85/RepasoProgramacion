@@ -13,6 +13,7 @@ export class MobileLibrary
         this.name = name;
         this.location = location;
         this.mobiles = mobiles;
+        this.totalPrice = this.totalPriceCalculation();
     }
 
     //Metodos Getters y Setters-
@@ -56,14 +57,29 @@ export class MobileLibrary
         this.totalPrice = precio;
     }
 
-    public totalPriceCalculation():void
+    private totalPriceCalculation():number
     {
         let sumTotal:number =0;
         for(let m of this.mobiles){
             sumTotal += m.price;
         }
 
-        this.totalPrice = sumTotal;
+        return sumTotal;
+    }
+
+    public printLibrary():void
+    {
+        console.log("This is all my mobiles:");
+       
+
+        for(let m in this.mobiles){
+            console.log("The characteristics or the mobile "+ this.mobiles[m].name + " are");
+            this.mobiles[m].mostrarAtributos();    
+        }
+        console.log("Price overall: "+ this.getTotalPrice());
+        
+        
+        
     }
 
 }
